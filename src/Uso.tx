@@ -1,0 +1,64 @@
+         <CamposTexto/>
+      {/* Uso de la paleta cromatica */}
+      <PaletaCromatica color="primary" size="medium">
+        Color degradado 
+      </PaletaCromatica>
+
+      {/*Uso del logo  */}
+      <Logo />
+
+      {/* Uso del avatar del usuario */}
+      <UsuarioAvatar />
+
+      {/* //ejemplo de Tipografia */}
+      <Tipografia variant="h1" size="2xl" className="text-purple-600">
+        Título grande
+      </Tipografia>
+
+      {/* /ejemplo uso de botones */}
+      <Botones
+        label="Primario"
+        tipo="primario"
+        onClick={() => alert("Primario")}
+      />
+      <Botones label="Aceptar" 
+      tipo="alerta" onClick={() => 
+      alert("Alerta")} />
+      
+      {/* Ejemplo de uso de iconos */}
+      <Icono name="buscar" className="m-2" />
+      <Icono name="notificaciones" className="m-2" />
+
+alertas
+      <Alerta
+        tipo="informacion"
+        mensaje="Contraseña modificada correctamente"
+        onAceptar={() => alert("aceptar")}
+      />
+
+      <Alerta
+        tipo="confirmacion"
+        mensaje="Cambios Guardados"
+        
+      />
+      <Alerta
+        tipo="eliminacion"
+        mensaje="Desea eliminar el producto"
+        onAceptar={() => alert("Confirmar")}
+        onCancelar={() => alert("Cancelar")}
+        
+      />
+
+// moleculas 
+<FormularioUsuario/>
+<FormularioCliente/>
+<AvatarTexto/>
+<NavegacionAdministrador/>
+
+buscar con diferente placeholder
+<Buscador placeholder="Bucar preventa"/>
+uso de Encabezado
+<Encabezado mensaje="Ventas y Devoluciones" />
+
+<TextArea/>
+<FiltroBusqueda/>
