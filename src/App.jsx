@@ -1,14 +1,14 @@
 import React from "react";
 import "./index.css";
-import FiltroOpciones from "./components/molecules/FiltroOpciones";
+import Login from "../src/pages/LoginPage/Login"
 
 
 const App = () => {
-  const opcionesFiltro=["Todos", "Por fecha", "Por zona"]
+ 
   
   return (
     <div>
-     <FiltroOpciones/>
+     <Login/>
     </div>
   );
 };

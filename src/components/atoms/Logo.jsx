@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo tatsoft.jpg";
 
-const Logo = ({ src = logo, alt = "logo-tatsoft", size = 80 }) => {
+const Logo = ({ src = logo, alt = "logo-tatsoft", size = 100 }) => {
   return (
     <img
       src={src}
