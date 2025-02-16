@@ -3,14 +3,15 @@ import Tipografia from "../../components/atoms/Tipografia";
 import Logo from "../../components/atoms/Logo";
 import CamposTexto from "../../components/atoms/CamposTexto";
 import Botones from "../../components/atoms/Botones";
-import image from '../../../public/images/product1.png'
+import image from "../../assets/pixelcut-export (1).jpg";
+
 const Login = () => {
   return (
     <Tipografia>
       <div className="flex flex-col md:flex-row h-screen">
         <div className="w-full md:w-3/4 h-full bg-cover">
           <img
-            src={image}
+            src={ image }
             alt="Login"
             className="w-full h-full md:h-full object-cover"
           />
