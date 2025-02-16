@@ -10,7 +10,7 @@ const Login = () => {
       <div className="flex flex-col md:flex-row h-screen">
         <div className="w-full md:w-3/4 h-full bg-cover">
           <img
-            src="src/assets/imagenLogin.jpg"
+            src="src/assets/logo tatsoft.jpg"
             alt="Login"
             className="w-full h-full md:h-full object-cover"
           />
