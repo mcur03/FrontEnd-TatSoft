@@ -10,7 +10,7 @@ const Login = () => {
       <div className="flex flex-col md:flex-row h-screen">
         <div className="w-full md:w-3/4 h-full bg-cover">
           <img
-            src="src/assets/pixelcut-export (1).jpg"
+            src="src/assets/imagenLogin.jpg"
             alt="Login"
             className="w-full h-full md:h-full object-cover"
           />
