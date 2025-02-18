@@ -37,8 +37,8 @@ const iconos = {
   ubicacion: FaMapLocationDot,
 };
 
-const Icono = ({ name, size = 25, color = "#52307C", className = "" }) => {
-  const finalColor = (() => {
+const Icono = ({ name, size = 25, color = "#52307C", className = "", customColor, onClick }) => {
+  const finalColor = customColor ?? (() => {
     switch (name) {
       case "cerrar-sesion":
         return "white";
@@ -51,7 +51,7 @@ const Icono = ({ name, size = 25, color = "#52307C", className = "" }) => {
       case "eliminarAlert":
         return "#E24C4B";
       default:
-        return color; 
+        return color;
     }
   })();
 
@@ -60,7 +60,6 @@ const Icono = ({ name, size = 25, color = "#52307C", className = "" }) => {
   const IconComponent = iconos[name];
 
   if (!IconComponent) {
-    console.error(`El ícono "${name}" no está definido en el objeto "iconos".`);
     return (
       <div className={`inline-flex items-center justify-center ${className}`}>
         <p>Icono no encontrado</p>
@@ -69,7 +68,7 @@ const Icono = ({ name, size = 25, color = "#52307C", className = "" }) => {
   }
 
   return (
-    <div className={`inline-flex items-center justify-center ${className}`}>
+    <div className={`inline-flex items-center justify-center cursor-pointer ${className}`} onClick={onClick}>
       <IconComponent style={{ fontSize: finalSize, color: finalColor }} />
     </div>
   );

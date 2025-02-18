@@ -9,7 +9,7 @@ const CampoTexto = ({
   onChange,
   required = false,
 }) => (
-  <div className="mb-2">
+  <div className="mb-3 w-full max-w-xs sm:max-w-sm md:max-w-md">
     <label
       htmlFor={id}
       className="block mb-2 text-sm font-medium text-gray-700"
@@ -23,7 +23,7 @@ const CampoTexto = ({
       value={value}
       onChange={onChange}
       required={required}
-      className="bg-purple-50 border focus:outline-none focus:border-purple-500 border-purple-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 block w-96 p-1"
+      className="bg-purple-50 border border-purple-300 text-gray-900 text-sm rounded-lg focus:outline-none focus:border-purple-500 focus:ring-purple-500 block w-full p-1"
       aria-label={placeholder}
     />
   </div>

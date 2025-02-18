@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 import Tipografia from "../../components/atoms/Tipografia";
 import Logo from "../../components/atoms/Logo";
 import CamposTexto from "../../components/atoms/CamposTexto";
@@ -6,12 +7,14 @@ import Botones from "../../components/atoms/Botones";
 import image from "../../assets/pixelcut-export (1).jpg";
 
 const Login = () => {
+  const navigate = useNavigate(); 
+
   return (
     <Tipografia>
       <div className="flex flex-col md:flex-row h-screen">
         <div className="w-full md:w-3/4 h-full bg-cover">
           <img
-            src={ image }
+            src={image}
             alt="Login"
             className="w-full h-full md:h-full object-cover"
           />
@@ -22,7 +25,10 @@ const Login = () => {
             <div className="w-full max-w-xs flex flex-col items-center">
               <CamposTexto label="Correo electrónico" type="email" />
               <CamposTexto label="Contraseña" type="password" />
-              <p className="text-gray-700 text-sm text-right mt-2 cursor-pointer w-full text-center font-semibold">
+              <p
+                className="text-gray-700 text-sm text-right mt-2 cursor-pointer w-full text-center font-semibold"
+                onClick={() => navigate("/recuperar-password")} 
+              >
                 ¿Olvidaste la contraseña?
               </p>
               <div className="mt-5 w-full flex justify-center">
@@ -31,7 +37,7 @@ const Login = () => {
             </div>
           </div>
           <footer className="text-sm text-gray-500 text-center py-4">
-            © TatSoft 2024 Dirección IP 757138754788191
+            © TatSoft 2024 Dirección IP
           </footer>
         </div>
       </div>
