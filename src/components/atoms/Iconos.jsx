@@ -12,6 +12,8 @@ import { GrMoney } from "react-icons/gr";
 import { AiFillDelete } from "react-icons/ai";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { TiDelete } from "react-icons/ti";
+import { HiOutlineMail } from "react-icons/hi";
+import { IoIosLock } from "react-icons/io";
 
 const iconos = {
   buscar: IoSearch,
@@ -35,6 +37,8 @@ const iconos = {
   confirmar: BsFillCheckCircleFill,
   eliminarAlert: TiDelete,
   ubicacion: FaMapLocationDot,
+  correo:HiOutlineMail,
+  candado:IoIosLock
 };
 
 const Icono = ({ name, size = 25, color = "#52307C", className = "", customColor, onClick }) => {

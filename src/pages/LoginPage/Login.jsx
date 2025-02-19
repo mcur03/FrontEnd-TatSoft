@@ -12,16 +12,16 @@ const Login = () => {
   return (
     <Tipografia>
       <div className="flex flex-col md:flex-row h-screen">
-        <div className="w-full md:w-3/4 h-full bg-cover">
+        <div className="w-full md:w-2/3 h-full bg-cover">
           <img
             src={image}
             alt="Login"
             className="w-full h-full md:h-full object-cover"
           />
         </div>
-        <div className="w-full md:w-2/5 flex flex-col justify-between bg-white p-6">
-          <div className="flex flex-col justify-center items-center flex-grow">
-            <Logo />
+        <div className="w-full md:w-2/5 flex flex-col justify-between bg-white p-7">
+          <div className="flex flex-col justify-center items-center flex-grow ">
+          <Logo className="m-6" />
             <div className="w-full max-w-xs flex flex-col items-center">
               <CamposTexto label="Correo electrónico" type="email" />
               <CamposTexto label="Contraseña" type="password" />

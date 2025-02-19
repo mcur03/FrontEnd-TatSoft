@@ -22,7 +22,7 @@ const CodigoVerificacion = () => {
 
   return (
     <Tipografia>
-      <div className="flex flex-col items-center justify-center h-screen bg-white relative">
+      <div className="flex flex-col items-center justify-center h-screen bg-white relative ">
         <div className="absolute top-5 left-7">
           <Icono
             name="volver"
@@ -37,14 +37,14 @@ const CodigoVerificacion = () => {
           <h1 className="text-2xl font-bold mb-6 p-3">
             Introduce tu código de verificación
           </h1>
-          <p className="text-black-600 mb-6">
+          <p className="text-black-600 mb-7 p-3">
             Hemos enviado un código de verificación de <span className="font-semibold">4</span> dígitos a tu correo
             electrónico. Por favor, ingrésalo a continuación para continuar con
             la recuperación de tu contraseña.
           </p>
 
-          <div className="flex justify-end w-full pr-1 mb-6">
-            <p className="text-black-800 text-sm">
+          <div className="flex justify-end w-full pr-3 mb-5">
+            <p className="text-black-800 text-sm p-1">
               ¿No recibiste el código? <span className="font-semibold cursor-pointer text-purple-800">Reenviar</span>
             </p>
           </div>
@@ -62,7 +62,9 @@ const CodigoVerificacion = () => {
               />
             ))}
           </div>
-          <Boton label="Verificar código" />
+          <Boton label="Verificar código"
+          onClick={()=> navigate ("/restablecer")}
+          />
         </div>
 
         <footer className="absolute bottom-6 text-gray-500 text-sm">
