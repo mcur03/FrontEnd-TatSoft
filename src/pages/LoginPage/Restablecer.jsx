@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Tipografia from "../../components/atoms/Tipografia";
 import Boton from "../../components/atoms/Botones";
 import Icono from "../../components/atoms/Iconos";
 import CampoTexto from "../../components/atoms/CamposTexto";
+import AlertaRestablecer from "./AlertaRestablecer";
 
 const Restablecer = () => {
   const navigate = useNavigate();
+  const [mostrarAlerta, setMostrarAlerta] = useState(false);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white px-6 sm:px-10">
@@ -54,10 +56,16 @@ const Restablecer = () => {
           </div>
 
           <div className="flex justify-center">
-            <Boton label="Guardar" className="w-full max-w-xs sm:max-w-sm" />
+            <Boton 
+              label="Guardar" 
+              className="w-full max-w-xs sm:max-w-sm"
+              onClick={() => setMostrarAlerta(true)} 
+            />
           </div>
         </div>
       </Tipografia>
+
+      {mostrarAlerta && <AlertaRestablecer onClose={() => setMostrarAlerta(false)} />}
     </div>
   );
 };

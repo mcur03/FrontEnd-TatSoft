@@ -61,7 +61,10 @@ uso de Encabezado
 <Encabezado mensaje="Ventas y Devoluciones" />
 
 <TextArea/>
-<FiltroBusqueda/>
+<FiltroOpciones
+  cambiarle las opciones  
+opciones={["Todos", "Colaboladores", "Administrador"]}
+/>
 <Card/>
 
 

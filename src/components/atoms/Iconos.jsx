@@ -14,13 +14,14 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 import { TiDelete } from "react-icons/ti";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoIosLock } from "react-icons/io";
+import { MdOutlineStorefront } from "react-icons/md";
 
 const iconos = {
   buscar: IoSearch,
   notificaciones: IoIosNotifications,
   "gest-usuarios": FaUserEdit,
-  "gest-clientes": IoArrowBackCircleSharp,
-  "gest-produtos": FaAirFreshener,
+  "gest-clientes": MdOutlineStorefront,
+  "gest-productos": FaAirFreshener,
   "gest-zonas": FaMapLocationDot,
   "gest-acumulados": FaChartColumn,
   catalogo: LuClipboardList,

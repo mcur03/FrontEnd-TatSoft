@@ -11,7 +11,7 @@ const Boton = ({
   const tipos = {
     primario: "bg-[#B06AFF] hover:bg-purple-600",
     secundario: "bg-[#842AF3] hover:bg-purple-800",
-    alerta: "bg-[#A5F6A5] hover:bg-green-300",
+    alerta: "bg-[#63FF63] hover:bg-green-300",
     cancelar: "bg-[#F48783] hover:bg-red-400",
   };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Avatar from '../../assets/Avatar/Woman free icons designed by Prosymbols Premium.jpeg';
 
-const UsuarioAvatar = ({ src = Avatar, alt = "Avatar", size = 40 }) => {
+const UsuarioAvatar = ({ src = Avatar, alt = "Avatar", size = 45 }) => {
   return (
     <img
       src={src}
