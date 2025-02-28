@@ -27,35 +27,25 @@ const App = () => {
 
   return (
   <>
-    {/* <RegistroUsuario/>
-      // <Router>
-      //   <Routes>
-      //     <Route path="/" element={<Login />} /> 
-      //     <Route path="/recuperar-password" element={<RecuperarPassword />} /> 
-      //     <Route path="/codigo-verificacion" element={<CodigoVerificacion />} />
-      //     <Route path="/restablecer" element={<Restablecer />} />
-      //     <Route path="/alerta-restablecer" element={<AlertaRestablecer />} /> 
-      //     <Route path="/perfil-colaborador" element={<Profile />} />
-      //     <Route path="/ver/usuario" element={<VerUsuario />} />
-      //     <Route path="/editar/usuario" element={<EditarUsuario />} />
-      //     <Route path="/inhabilitar-usuario" element={<AlertaInhabilitar/>}/>
-      //     <Route path="/guardar-cambios" element={<AlertaEdicion/>}/>
-      //   </Routes>
-      // </Router> */}
-
-     <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/recuperar-password" element={<RecuperarPassword />} />
-        <Route path="/codigo-verificacion" element={< CodigoVerificacion/>} />
-        <Route path="/restablecer" element={<Restablecer/>}/>
-        <Route path="/restablecer" element={<Restablecer />} />
-        <Route path="/zonas" element={<Zonas />} />
-        <Route path="/gestion-zonas" element={<GestionZonas />} />
-        <Route path="/registrar-zona" element={<RegistrarZona />} />
-        <Route path="/editar-zona" element={<EditarZona />} />
-      </Routes>
-    </Router>
+    <RegistroUsuario/>
+      {/* <Router>
+        <Routes>
+          <Route path="/" element={<Login />} /> 
+          <Route path="/recuperar-password" element={<RecuperarPassword />} /> 
+          <Route path="/codigo-verificacion" element={<CodigoVerificacion />} />
+          <Route path="/restablecer" element={<Restablecer />} />
+          <Route path="/alerta-restablecer" element={<AlertaRestablecer />} /> 
+          <Route path="/perfil-colaborador" element={<Profile />} />
+          <Route path="/ver/usuario" element={<VerUsuario />} />
+          <Route path="/editar/usuario" element={<EditarUsuario />} />
+          <Route path="/inhabilitar-usuario" element={<AlertaInhabilitar/>}/>
+          <Route path="/zonas" element={<Zonas />} />
+          <Route path="/gestion-zonas" element={<GestionZonas />} />
+          <Route path="/registrar-zona" element={<RegistrarZona />} />
+          <Route path="/editar-zona" element={<EditarZona />} />
+          <Route path="/guardar-cambios" element={<AlertaEdicion/>}/>
+        </Routes>
+      </Router> */}
   </>
   );
 };
