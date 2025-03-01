@@ -8,6 +8,8 @@ import GestionZonas from './pages/GestionZonas/GestionZonas';
 import EditarZona from './pages/GestionZonas/EditarZona'
 import RegistrarZona from './pages/GestionZonas/RegistraZona'
 import AsignacionZonas from './pages/GestionZonas/AsiganacionZonas'
+import ColaboradoresZona from './pages/GestionZonas/ColaboradoresZona'
+import EditarColaboradorZona from "./pages/GestionZonas/EditarColaboradorZona";
 import RegisterProductForm from './pages/RegisterProductForm/RegisterProductForm';
 import ProductList from './pages/ProductList/ProductList';
 import Login from "./pages/LoginPage/Login";
@@ -45,6 +47,8 @@ const App = () => {
       <Route path="/registrar-zona" element={<RegistrarZona />} />
       <Route path="/editar-zona" element={<EditarZona />} />
       <Route path="/gestion-zonas/asignar" element={<AsignacionZonas />} />
+      <Route path="/gestion-zonas/colaboradores" element={<ColaboradoresZona />} />
+      <Route path="/gestion-zonas/editar-colaboradores" element={<EditarColaboradorZona />} />
     </Routes>
     </Router>
   );
