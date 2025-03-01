@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "../src/index.css";
 import Profile from "./pages/collaborator/profile";
-import '../src/index.css';
 import Zonas from './pages/GestionZonas/Zonas'
 import GestionZonas from './pages/GestionZonas/GestionZonas';
 import EditarZona from './pages/GestionZonas/EditarZona'
