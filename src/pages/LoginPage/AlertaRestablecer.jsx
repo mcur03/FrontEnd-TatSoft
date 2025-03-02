@@ -8,8 +8,11 @@ const AlertaRestablecer = ({ onClose }) => {
   const navigate = useNavigate();
 
   const handleAceptar = () => {
-    onClose();
-    navigate("/"); 
+    if (onClose) {
+      onClose();
+    } else {
+      navigate("/");
+    }
   };
 
   return (

@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { userService } from "../../context/services/ApiService";
 import Encabezado from "../../components/molecules/Encabezado";
 import Tipografia from "../../components/atoms/Tipografia";
 import CampoTexto from "../../components/atoms/CamposTexto";
 import Boton from "../../components/atoms/Botones";
 
 const RegistroUsuario = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nombre: "",
     apellido: "",
@@ -15,6 +18,9 @@ const RegistroUsuario = () => {
     password: "",
     confirmarPassword: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,18 +30,74 @@ const RegistroUsuario = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Datos de registro:", formData);
+    
+    // Validar que las contraseñas coincidan
+    if (formData.password !== formData.confirmarPassword) {
+      setError("Las contraseñas no coinciden");
+      return;
+    }
+
+    // Validar la complejidad de la contraseña
+    if (formData.password.length < 6) {
+      setError("La contraseña debe tener al menos 6 caracteres");
+      return;
+    }
+
+    setLoading(true);
+    setError("");
+
+    try {
+      // Formato de los datos para la API
+      const userData = {
+        cedula: formData.cedula,
+        nombreCompleto: `${formData.nombre} ${formData.apellido}`.trim(),
+        celular: formData.numeroCelular,
+        correo: formData.correoElectronico,
+        contrasena: formData.password,
+        rol: formData.rol.toLowerCase()
+      };
+      
+      // Llamada a la API para crear el usuario
+      await userService.createUser(userData);
+      
+      setSuccess(true);
+      setTimeout(() => {
+        navigate("/admin");
+      }, 2000);
+    } catch (error) {
+      console.error("Error al registrar usuario:", error);
+      
+      if (error.response && error.response.data && error.response.data.error) {
+        setError(error.response.data.error);
+      } else {
+        setError("Error al registrar el usuario. Por favor, inténtalo de nuevo más tarde.");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="min-h-screen bg-white flex justify-center items-center">
       <div className="w-full max-w-md">
-        <div className="w-screen absolute left-0 right-">
+        <div className="w-screen absolute left-0 right-0">
           <Encabezado mensaje="Registro de usuario" />
         </div>
         <div className="p-5 pt-20">
+          {error && (
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+              {error}
+            </div>
+          )}
+          
+          {success && (
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+              Usuario registrado con éxito. Redirigiendo...
+            </div>
+          )}
+          
           <form onSubmit={handleSubmit} className="space-y-6">
             <Tipografia>
               <CampoTexto
@@ -47,7 +109,6 @@ const RegistroUsuario = () => {
                 className="w-full border-b border-gray-300 pb-2 focus:border-purple-500 focus:outline-none"
                 required
               />
-
               <CampoTexto
                 type="text"
                 name="apellido"
@@ -57,7 +118,6 @@ const RegistroUsuario = () => {
                 className="w-full border-b border-gray-300 pb-2 focus:border-purple-500 focus:outline-none"
                 required
               />
-
               <CampoTexto
                 type="text"
                 name="cedula"
@@ -67,7 +127,6 @@ const RegistroUsuario = () => {
                 className="w-full border-b border-gray-300 pb-2 focus:border-purple-500 focus:outline-none"
                 required
               />
-
               <CampoTexto
                 type="tel"
                 name="numeroCelular"
@@ -77,7 +136,6 @@ const RegistroUsuario = () => {
                 className="w-full border-b border-gray-300 pb-2 focus:border-purple-500 focus:outline-none"
                 required
               />
-
               <CampoTexto
                 type="email"
                 name="correoElectronico"
@@ -87,7 +145,6 @@ const RegistroUsuario = () => {
                 className="w-full border-b border-gray-300 pb-2 focus:border-purple-500 focus:outline-none"
                 required
               />
-
               <div className="relative">
                 <select
                   name="rol"
@@ -97,8 +154,8 @@ const RegistroUsuario = () => {
                   required
                 >
                   <option value="">Seleccionar rol</option>
-                  <option value="colaborador">Colaborador</option>
-                  <option value="administrador">Administrador</option>
+                  <option value="COLABORADOR">Colaborador</option>
+                  <option value="ADMINISTRADOR">Administrador</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-gray-700">
                   <svg
@@ -115,7 +172,6 @@ const RegistroUsuario = () => {
                   </svg>
                 </div>
               </div>
-
               <CampoTexto
                 type="password"
                 name="password"
@@ -125,7 +181,6 @@ const RegistroUsuario = () => {
                 className="w-full border-b border-gray-300 pb-2 focus:border-purple-500 focus:outline-none"
                 required
               />
-
               <CampoTexto
                 label="Confirmar contraseña"
                 type="password"
@@ -137,7 +192,12 @@ const RegistroUsuario = () => {
               />
             </Tipografia>
             <div className="flex justify-center">
-              <Boton tipo="secundario" label="Registrar" type="submit" />
+              <Boton 
+                tipo="secundario" 
+                label={loading ? "Registrando..." : "Registrar"} 
+                type="submit"
+                disabled={loading}
+              />
             </div>
           </form>
         </div>
