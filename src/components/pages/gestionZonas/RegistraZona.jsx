@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { areaService } from "../../context/services/ApiService";
-import Tipografia from "../../components/atoms/Tipografia";
-import Icono from "../../components/atoms/Iconos";
+import { areaService } from "../../../context/services/ApiService";
+import Icono from "../../../components/atoms/Iconos";
 
 const RegistrarZona = () => {
   const navigate = useNavigate();

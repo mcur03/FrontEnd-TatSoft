@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { productService } from '../../context/services/ApiService';
-import CampoTexto from '../../components/atoms/CamposTexto';
-import Botones from '../../components/atoms/Botones';
-import Tipografia from '../../components/atoms/Tipografia';
-import Encabezado from '../../components/molecules/Encabezado';
+import { productService } from '../../../context/services/ApiService';
+import CampoTexto from '../../../components/atoms/CamposTexto';
+import Botones from '../../../components/atoms/Botones';
+import Tipografia from '../../../components/atoms/Tipografia';
+import Encabezado from '../../../components/molecules/Encabezado';
 
 const RegisterProductForm = () => {
   const navigate = useNavigate();

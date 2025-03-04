@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { areaService } from "../../context/services/ApiService";
-import Tipografia from "../../components/atoms/Tipografia";
-import Icono from "../../components/atoms/Iconos";
+import { areaService } from "../../../context/services/ApiService";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Icono from "../../../components/atoms/Iconos";
 
 const EditarZona = () => {
   const { id } = useParams();

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
-import Tipografia from '../../components/atoms/Tipografia';
-import Botones from '../../components/atoms/Botones';
-import Icono from '../../components/atoms/Iconos';
+import { useAuth } from '../../../context/AuthContext';
+import Tipografia from '../../atoms/Tipografia';
+import Botones from '../../atoms/Botones';
+import Icono from '../../atoms/Iconos';
 
 const Unauthorized = () => {
   const navigate = useNavigate();

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
-import { userService } from "../../context/services/ApiService";
-import AvatarTexto from "../../components/molecules/AvatarTexto";
-import CampoTextoProfile from "../../components/atoms/CamposTextoProfile";
-import Tipografia from "../../components/atoms/Tipografia";
-import Encabezado from "../../components/molecules/Encabezado";
-import NavegacionUsuario from "../../components/organisms/NavegacionUsuario";
+import { useAuth } from "../../../context/AuthContext";
+import { userService } from "../../../context/services/ApiService";
+import AvatarTexto from "../../../components/molecules/AvatarTexto";
+import CampoTextoProfile from "../../../components/atoms/CamposTextoProfile";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Encabezado from "../../../components/molecules/Encabezado";
+import NavegacionUsuario from "../../../components/organisms/NavegacionUsuario";
 
 const Profile = () => {
   const { user, token } = useAuth();

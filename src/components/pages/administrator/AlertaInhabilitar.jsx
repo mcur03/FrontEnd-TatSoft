@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { userService } from "../../context/services/ApiService";
-import Encabezado from "../../components/molecules/Encabezado";
-import Tipografia from "../../components/atoms/Tipografia";
-import CampoTexto from "../../components/atoms/CamposTexto";
-import Boton from "../../components/atoms/Botones";
+import { userService } from "../../../context/services/ApiService";
+import Encabezado from "../../../components/molecules/Encabezado";
+import Tipografia from "../../../components/atoms/Tipografia";
+import CampoTexto from "../../../components/atoms/CamposTexto";
+import Boton from "../../../components/atoms/Botones";
 
 const RegistroUsuario = () => {
   const navigate = useNavigate();

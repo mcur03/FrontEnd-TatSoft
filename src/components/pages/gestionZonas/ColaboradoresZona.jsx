@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { areaService, userService } from "../../context/services/ApiService";
-import Tipografia from '../../components/atoms/Tipografia';
-import Icono from '../../components/atoms/Iconos';
-import Boton from '../../components/atoms/Botones';
+import { areaService, userService } from "../../../context/services/ApiService";
+import Tipografia from '../../../components/atoms/Tipografia';
+
 
 const ColaboradoresZona = () => {
   const navigate = useNavigate();

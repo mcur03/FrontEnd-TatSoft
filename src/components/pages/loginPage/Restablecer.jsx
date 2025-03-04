@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
-import Tipografia from "../../components/atoms/Tipografia";
-import Boton from "../../components/atoms/Botones";
-import Icono from "../../components/atoms/Iconos";
-import CampoTexto from "../../components/atoms/CamposTexto";
+import { useAuth } from "../../../context/AuthContext";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Boton from "../../../components/atoms/Botones";
+import Icono from "../../../components/atoms/Iconos";
+import CampoTexto from "../../../components/atoms/CamposTexto";
 import AlertaRestablecer from "./AlertaRestablecer";
 
 const Restablecer = () => {

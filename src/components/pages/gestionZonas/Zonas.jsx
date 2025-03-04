@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { areaService, clientService } from "../../context/services/ApiService";
-import Tipografia from "../../components/atoms/Tipografia";
-import Boton from "../../components/atoms/Botones";
-import BarraZona from "../../components/molecules/BarraZonas";
-import Encabezado from "../../components/molecules/Encabezado";
+import { areaService, clientService } from "../../../context/services/ApiService";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Boton from "../../../components/atoms/Botones";
+import BarraZona from "../../../components/molecules/BarraZonas";
+import Encabezado from "../../../components/molecules/Encabezado";
 
 const Zonas = () => {
   const navigate = useNavigate();

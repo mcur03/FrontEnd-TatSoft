@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { areaService } from "../../context/services/ApiService";
-import Icono from "../../components/atoms/Iconos";
-import Tipografia from "../../components/atoms/Tipografia";
+import { areaService } from "../../../context/services/ApiService";
+import Icono from "../../../components/atoms/Iconos";
+import Tipografia from "../../../components/atoms/Tipografia";
 
 const GestionZonas = () => {
   const navigate = useNavigate();

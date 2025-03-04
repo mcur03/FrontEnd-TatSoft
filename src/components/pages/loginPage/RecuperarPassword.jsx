@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
-import Tipografia from "../../components/atoms/Tipografia";
-import Boton from "../../components/atoms/Botones";
-import CampoTexto from "../../components/atoms/CamposTexto";
-import Icono from "../../components/atoms/Iconos";
+import { useAuth } from "../../../context/AuthContext";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Boton from "../../../components/atoms/Botones";
+import CampoTexto from "../../../components/atoms/CamposTexto";
+import Icono from "../../../components/atoms/Iconos";
 
 const OlvidarPassword = () => {
   const navigate = useNavigate();

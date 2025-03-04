@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
-import Tipografia from "../../components/atoms/Tipografia";
-import Logo from "../../components/atoms/Logo";
-import CamposTexto from "../../components/atoms/CamposTexto";
-import Botones from "../../components/atoms/Botones";
-import image from "../../assets/pixelcut-export (1).jpg";
+import { useAuth } from "../../../context/AuthContext";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Logo from "../../../components/atoms/Logo";
+import CamposTexto from "../../../components/atoms/CamposTexto";
+import Botones from "../../../components/atoms/Botones";
+import image from "../../../assets/pixelcut-export (1).jpg";
 
 const Login = () => {
   const navigate = useNavigate();

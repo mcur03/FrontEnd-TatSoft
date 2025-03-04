@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { userService } from "../../context/services/ApiService";
-import Tipografia from "../../components/atoms/Tipografia";
-import Botones from "../../components/atoms/Botones";
-import Encabezado from "../../components/molecules/Encabezado";
-import AvatarUsuario from "../../components/atoms/AvatarUsuario";
+import { userService } from "../../../context/services/ApiService";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Botones from "../../../components/atoms/Botones";
+import Encabezado from "../../../components/molecules/Encabezado";
+import AvatarUsuario from "../../../components/atoms/AvatarUsuario";
 import AlertaInhabilitar from "./AlertaInhabilitar";
 
 const VerUsuario = () => {

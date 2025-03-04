@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { userService, areaService } from "../../context/services/ApiService";
-import Tipografia from "../../components/atoms/Tipografia";
-import Icono from "../../components/atoms/Iconos";
+import { userService, areaService } from "../../../context/services/ApiService";
+import Tipografia from "../../../components/atoms/Tipografia";
 
 const AsignacionZonas = () => {
   const navigate = useNavigate();

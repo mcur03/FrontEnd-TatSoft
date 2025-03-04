@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { productService } from '../../context/services/ApiService';
-import Tipografia from '../../components/atoms/Tipografia';
-import Iconos from '../../components/atoms/Iconos';
-import Botones from '../../components/atoms/Botones';
-import Encabezado from '../../components/molecules/Encabezado';
-import Buscador from '../../components/molecules/Buscador';
+import { productService } from '../../../context/services/ApiService';
+import Tipografia from '../../../components/atoms/Tipografia';
+import Iconos from '../../../components/atoms/Iconos';
+import Botones from '../../../components/atoms/Botones';
+import Encabezado from '../../../components/molecules/Encabezado';
+import Buscador from '../../../components/molecules/Buscador';
 
 const ProductList = () => {
   const navigate = useNavigate();

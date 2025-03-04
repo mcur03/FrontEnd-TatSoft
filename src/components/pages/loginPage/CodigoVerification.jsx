@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
-import Tipografia from "../../components/atoms/Tipografia";
-import Boton from "../../components/atoms/Botones";
-import Icono from "../../components/atoms/Iconos";
+import { useAuth } from "../../../context/AuthContext";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Boton from "../../../components/atoms/Botones";
+import Icono from "../../../components/atoms/Iconos";
 
 const CodigoVerificacion = () => {
   const navigate = useNavigate();

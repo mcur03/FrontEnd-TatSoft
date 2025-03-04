@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { userService } from "../../context/services/ApiService";
-import AvatarTexto from "../../components/molecules/AvatarTexto";
-import CampoTextoProfile from "../../components/atoms/CamposTextoProfile";
-import Tipografia from "../../components/atoms/Tipografia";
-import Boton from "../../components/atoms/Botones";
-import CampoTexto from "../../components/atoms/CamposTexto";
+import { userService } from "../../../context/services/ApiService";
+import AvatarTexto from "../../../components/molecules/AvatarTexto";
+import CampoTextoProfile from "../../../components/atoms/CamposTextoProfile";
+import Tipografia from "../../../components/atoms/Tipografia";
+import Boton from "../../../components/atoms/Botones";
+import CampoTexto from "../../../components/atoms/CamposTexto";
 import AlertaEdicion from "./AlertaEdicion";
-import Icono from "../../components/atoms/Iconos";
+import Icono from "../../../components/atoms/Iconos";
 
 const EditarUsuario = () => {
   const { id } = useParams();

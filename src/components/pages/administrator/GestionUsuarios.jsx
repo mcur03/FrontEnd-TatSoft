@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { userService } from "../../context/services/ApiService";
-import Encabezado from "../../components/molecules/Encabezado";
-import Boton from "../../components/atoms/Botones";
-import Buscador from "../../components/molecules/Buscador";
-import FiltroOpciones from "../../components/molecules/FiltroOpciones";
-import Card from "../../components/organisms/Card";
-import Tipografia from "../../components/atoms/Tipografia";
+import { userService } from "../../../context/services/ApiService";
+import Encabezado from "../../../components/molecules/Encabezado";
+import Boton from "../../../components/atoms/Botones";
+import Buscador from "../../../components/molecules/Buscador";
+import FiltroOpciones from "../../../components/molecules/FiltroOpciones";
+import Card from "../../../components/organisms/Card";
+import Tipografia from "../../../components/atoms/Tipografia";
 
 const GestionUsuarios = () => {
   const navigate = useNavigate();
