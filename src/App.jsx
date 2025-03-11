@@ -26,6 +26,7 @@ import AsignacionZonas from "./components/pages/gestionZonas/AsiganacionZonas";
 // Páginas de productos
 import RegisterProductForm from "./components/pages/gestionProductos/RegisterProductForm";
 import ProductList from "./components/pages/gestionProductos/ProductList";
+import GestionProductos from "./components/pages/gestionProductos/GestionProductos";
 
 // Páginas de colaborador
 import Profile from "./components/pages/collaborator/profile";
@@ -198,6 +199,8 @@ const App = () => {
           />
         } 
       />
+
+      <Route path="/gestion-productos" element={<GestionProductos />} />
       
       {/* Ruta por defecto - Redirige al login */}
       <Route path="*" element={<Navigate to="/" replace />} />
