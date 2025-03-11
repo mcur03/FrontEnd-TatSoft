@@ -108,7 +108,7 @@ const Login = () => {
                 />
               </div>
               <footer className="text-center text-xs text-gray-500 mt-4">
-                con ❤️ por Tatsoft - 2024
+                con ❤️ por Tatsoft - 2025
               </footer>
             </form>
           </div>
