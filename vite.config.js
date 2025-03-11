@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   server: {
     proxy: {
       // Proxy para el servicio de autenticación
@@ -35,6 +36,13 @@ export default defineConfig({
         target: 'https://backendpresalessalereturns-g2cghudwf2emhnf4.eastus-01.azurewebsites.net',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/presales-api/, ''),
+      },
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
       },
     },
   },
